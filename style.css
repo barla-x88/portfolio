@@ -1,0 +1,47 @@
+:root {
+  --page-background: #2c2c2c;
+  --font-color: #ffffff;
+}
+
+html {
+  font-size: 62.6%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--page-background);
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.logo {
+  width: 6rem;
+}
+
+.nav-wrapper {
+  height: 10vh;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  width: 50px;
+  height: 10px;
+  background-color: var(--font-color);
+}
+
+.line:not(:first-of-type) {
+  margin-top: 6px;
+}
