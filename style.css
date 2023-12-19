@@ -1,6 +1,9 @@
 :root {
   --page-background: #2c2c2c;
   --font-color: #ffffff;
+  --cta-color: #8685ef;
+  --default-lineHeight: 22px;
+  --alternate-textColor: #202124;
 }
 
 html {
@@ -78,5 +81,85 @@ h1 {
 
 h1 + p {
   margin-top: 12px;
-  line-height: 22px;
+  line-height: var(--default-lineHeight);
+}
+
+/* image styles */
+
+.imageContainer img {
+  max-width: 100%;
+  display: block;
+  margin: 30px auto;
+}
+
+/* btn styles */
+
+.btn-container a {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+
+  color: #202124;
+  background-color: #faf7ff;
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+
+.btn-container a:not(:first-of-type) {
+  margin-left: 10px;
+  background-color: var(--cta-color);
+  color: var(--font-color);
+}
+
+/* About section styles */
+.about {
+  margin-top: 4.8rem;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+
+  font-weight: bold;
+  font-size: 3.6rem;
+  display: inline-block;
+  padding: 5px 20px;
+  border-bottom: 1px solid var(--font-color);
+  margin-bottom: 30px;
+}
+
+.about p {
+  line-height: var(--default-lineHeight);
+}
+
+.expand {
+  color: var(--cta-color);
+}
+
+/* Skills section */
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-title {
+  display: inline-block;
+  margin: 22px auto;
+  padding: 5px;
+  background-color: var(--font-color);
+  color: var(--alternate-textColor);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.skill-items {
+  display: inline-block;
+}
+
+.skill-items img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
 }
