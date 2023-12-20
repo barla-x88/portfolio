@@ -41,7 +41,7 @@ body {
 }
 
 .nav-wrapper {
-  height: 10vh;
+  height: 10vmax;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -275,7 +275,7 @@ input[type='submit'] {
 
 footer {
   background-color: #202124;
-  height: 12vh;
+  height: 12vmax;
   display: flex;
   justify-content: center;
   align-items: center;
