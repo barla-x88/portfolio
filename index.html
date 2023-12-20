@@ -15,12 +15,12 @@
     
   </head>
   <body>
-    <header>
+    <header id="navbar">
       <div class="nav-wrapper">
         <div class="logo-container">
           <img src="./images/logo.png" alt="logo" class="logo" />
         </div>
-        <nav id="navbar" class="navbar">
+        <nav id="menubar" class="menubar">
           <ul>
             <li>
               <a href="#aboutme" class="nav-link">ABOUT</a>
@@ -170,16 +170,16 @@
       <p>&copy; 2023, Ankit Barla</p>
     </footer>
     <script>
-            const navbar = document.querySelector('#navbar');
+            const menubar = document.querySelector('#menubar');
       const burgers = document.querySelector('.burgers');
 
       burgers.addEventListener('click', (e) => {
-        navbar.classList.toggle('show-navbar');
+        menubar.classList.toggle('show-menubar');
 
         console.log(e.target);
       });
 
-      navbar.addEventListener('click', (e) => {
+      menubar.addEventListener('click', (e) => {
         if (e.target.classList.contains('nav-link')) {
           e.preventDefault();
 
@@ -191,7 +191,7 @@
           // 120 works fine
           window.scrollTo(left + window.scrollX, top - 118 + scrollY);
 
-          navbar.classList.toggle('show-navbar');
+          menubar.classList.toggle('show-menubar');
         }
       });
 

@@ -33,13 +33,13 @@ body {
   border: 1px solid red;
 }
 
-/* Navbar styles */
+/* menubar styles */
 
 .logo {
   width: 5rem;
 }
 
-header {
+#navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -308,13 +308,13 @@ footer {
   align-items: center;
 }
 
-/* For navbar */
+/* For menubar */
 @media (max-width: 800px) {
   .nav-wrapper {
     background-color: #202124;
   }
 
-  #navbar {
+  #menubar {
     position: absolute;
     top: 10vmax;
     left: 0;
@@ -322,19 +322,19 @@ footer {
     background-color: #202124;
   }
 
-  .navbar {
+  .menubar {
     transition: height 0.3s ease-in-out;
     display: block;
     height: 0;
     overflow: hidden;
   }
 
-  .show-navbar {
+  .show-menubar {
     border-top: 1px solid var(--font-color);
     height: 90vmax;
   }
 
-  #navbar ul {
+  #menubar ul {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -345,9 +345,9 @@ footer {
 
 /* Tablets */
 @media (min-width: 800px) {
-  /* navbar styles */
+  /* menubar styles */
 
-  #navbar {
+  #menubar {
     display: block;
   }
 
@@ -363,7 +363,7 @@ footer {
 }
 
 @media (max-width: 1150px) {
-  /* Navbar */
+  /* menubar */
   .nav-wrapper {
     padding: 15px 30px;
   }
@@ -376,7 +376,7 @@ footer {
 
 /* For desktops */
 @media (min-width: 1150px) {
-  /* navbar */
+  /* menubar */
   .nav-wrapper,
   .wrapper {
     max-width: 1024px;
