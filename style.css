@@ -270,3 +270,13 @@ input[type='submit'] {
   width: 100%;
   font-weight: bold;
 }
+
+/* Footer styles */
+
+footer {
+  background-color: #202124;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
