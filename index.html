@@ -20,16 +20,16 @@
         <div class="logo-container">
           <img src="./images/logo.png" alt="logo" class="logo" />
         </div>
-        <nav id="navbar">
+        <nav id="navbar" class="navbar">
           <ul>
             <li>
-              <a href="#aboutme">ABOUT</a>
+              <a href="#aboutme" class="nav-link">ABOUT</a>
             </li>
             <li>
-              <a href="#projects">PROJECTS</a>
+              <a href="#projects" class="nav-link">PROJECTS</a>
             </li>
             <li>
-              <a href="#contacts">CONTACTS</a>
+              <a href="#contacts" class="nav-link">CONTACT</a>
             </li>
             
           </ul>
@@ -142,7 +142,7 @@
               <br>
               <span class="bold">Contact me on - </span><span class="social-container">
                 <a href="https://twitter.com/BarlaX88"><img src="./images/twitter.svg" alt="Follow on Twitter"></a>
-                <a href="https://github.com/barla-x88" id="profile-link"><img src="./images/github.svg" alt="Follow on Github"></a>
+                <a href="https://github.com/barla-x88" target="_blank" id="profile-link"><img src="./images/github.svg" alt="Follow on Github"></a>
               </span>
           </div>
           <div class="divider">
@@ -170,9 +170,32 @@
       <p>&copy; 2023, Ankit Barla</p>
     </footer>
     <script>
+            const navbar = document.querySelector('#navbar');
       const burgers = document.querySelector('.burgers');
 
-      
+      burgers.addEventListener('click', (e) => {
+        navbar.classList.toggle('show-navbar');
+
+        console.log(e.target);
+      });
+
+      navbar.addEventListener('click', (e) => {
+        if (e.target.classList.contains('nav-link')) {
+          e.preventDefault();
+
+          const element = e.target.getAttribute('href');
+          const { left, top } = document
+            .querySelector(element)
+            .getBoundingClientRect();
+
+          // 120 works fine
+          window.scrollTo(left + window.scrollX, top - 118 + scrollY);
+
+          navbar.classList.toggle('show-navbar');
+        }
+      });
+
+
     </script>
   </body>
 </html>
