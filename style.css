@@ -35,6 +35,9 @@ body {
 }
 
 /* Navbar styles */
+#navbar {
+  display: none;
+}
 
 .logo {
   width: 5rem;
@@ -42,10 +45,23 @@ body {
 
 .nav-wrapper {
   height: 10vmax;
-  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--font-color);
+}
+
+.nav-wrapper ul {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+}
+
+.nav-wrapper a {
+  color: inherit;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .line {
@@ -281,9 +297,35 @@ footer {
   align-items: center;
 }
 
+/* Tablets */
 @media (min-width: 800px) {
+  /* navbar styles */
+
+  #navbar {
+    display: block;
+  }
+
+  .burgers {
+    display: none;
+  }
+
   .btn-container {
     width: fit-content;
     margin: auto;
+  }
+}
+
+@media (max-width: 1150px) {
+  .nav-wrapper {
+    padding: 15px 30px;
+  }
+}
+
+/* For desktops */
+@media (min-width: 1150px) {
+  .nav-wrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
