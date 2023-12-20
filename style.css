@@ -36,14 +36,14 @@ body {
 /* menubar styles */
 
 .logo {
-  width: 5rem;
+  width: 5vh;
 }
 
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 10vmax;
+  height: min(10vmax, 12vh);
   width: 100%;
   background-color: #202124;
 }
@@ -82,7 +82,7 @@ body {
 /* Hero section */
 
 #welcome-section {
-  margin-top: 10vmax;
+  margin-top: min(10vmax, 12vh);
 }
 
 h1 {
@@ -316,7 +316,7 @@ footer {
 
   #menubar {
     position: absolute;
-    top: 10vmax;
+    top: min(10vmax, 12vh);
     left: 0;
     width: 100%;
     background-color: #202124;
